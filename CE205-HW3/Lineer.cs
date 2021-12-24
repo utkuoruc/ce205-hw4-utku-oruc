@@ -1,4 +1,21 @@
-﻿using Microsoft.Msagl.Drawing;
+﻿/****************************************************************************
+ * Copyleft (L) 2021 CENG - All Rights Not Reserved
+ * You may use, distribute and modify this code.
+ ****************************************************************************/
+
+/**
+ * @file Lineer.cs
+ * @author Utku Oruc
+ * @date 21 December 2021
+ *
+ * @brief <b> Lineer Probing algorithm </b>
+ *
+ * HW-4 Sample Lib Functions
+ *
+ * @see http://bilgisayar.mmf.erdogan.edu.tr/en/
+ *
+ */
+using Microsoft.Msagl.Drawing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +28,11 @@ namespace CE205_HW3.libs
     public class Lineer
     {
         int[] table;
+        /**
+		*
+			@name Lineer
+			@brief \b constructor
+		    **/
         public Lineer(int length)
         {
             table = new int[length];
@@ -19,10 +41,20 @@ namespace CE205_HW3.libs
                 table[i] = -1;
             }
         }
+        /**
+		*
+			@name  Hash
+			@brief \b hash function
+		    **/
         public int Hash(int data)
         {
             return data % table.Length;
         }
+        /**
+		*
+			@name  TableLength
+			@brief \b return the numbe rof elements in the list
+		    **/
         public int TableLength()
         {
             int result = 0;
@@ -35,6 +67,11 @@ namespace CE205_HW3.libs
             }
             return result;
         }
+        /**
+		*
+			@name  Insert
+			@brief \b insert a value 
+		    **/
         public void Insert(int data)
         {
             if (data < 0)
@@ -76,6 +113,11 @@ namespace CE205_HW3.libs
             Console.WriteLine("no add");
 
         }
+        /**
+		*
+			@name  Search
+			@brief \b search an element
+		    **/
         public bool Search(int data)
         {
             int key = Hash(data);
@@ -104,6 +146,11 @@ namespace CE205_HW3.libs
             Console.WriteLine("Not found!");
             return false;
         }
+        /**
+		*
+			@name  Delete
+			@brief \b deletes an element
+		    **/
         public void Delete(int data)
         {
             int key = Hash(data);
@@ -134,6 +181,11 @@ namespace CE205_HW3.libs
             Console.WriteLine("Not Deleted!");
             return;
         }
+        /**
+		*
+			@name  Print
+			@brief \b print whole thing
+		    **/
         public void Print()
         {
             for (int i = 0; i < table.Length; i++)
@@ -141,7 +193,11 @@ namespace CE205_HW3.libs
                 Console.WriteLine(table[i]);
             }
         }
-
+        /**
+		*
+			@name  printTable
+			@brief \b print table by adding nodes
+		    **/
         public void printTable(ref Microsoft.Msagl.Drawing.Graph grapObject)
         {
             for (int i = 0; i < table.Length; i++)

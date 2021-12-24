@@ -1,4 +1,21 @@
-﻿using Microsoft.Msagl.Drawing;
+﻿/****************************************************************************
+ * Copyleft (L) 2021 CENG - All Rights Not Reserved
+ * You may use, distribute and modify this code.
+ ****************************************************************************/
+
+/**
+ * @file Seperate.cs
+ * @author Utku Oruc
+ * @date 21 December 2021
+ *
+ * @brief <b> Seperate Chaining algorithm </b>
+ *
+ * HW-4 Sample Lib Functions
+ *
+ * @see http://bilgisayar.mmf.erdogan.edu.tr/en/
+ *
+ */
+using Microsoft.Msagl.Drawing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +32,12 @@ namespace CE205_HW3.libs
             public int data;
             public HashNode next;
 
+            /**
+		*
+			@name  AddHashNode
+			@brief \b Adds node
+			Add node to the table.
+		    **/
             public void AddHashNode(int data, int index, HashNode[] table)
             {
                 if (table[index] == null)
@@ -43,6 +66,12 @@ namespace CE205_HW3.libs
             }
 
         }
+        /**
+		*
+			@name  AddHashNode
+			@brief \b Insert element
+			Inserts element
+		    **/
         public void Inserty(int data, HashNode[] table)
         {
             int key = data % table.Length;
@@ -58,6 +87,11 @@ namespace CE205_HW3.libs
             }
 
         }
+        /**
+		*
+			@name  AddHashNode
+			@brief \b List
+		    **/
         public void Listy(HashNode[] table)
         {
             for (int i = 0; i < table.Length; i++)
@@ -74,6 +108,11 @@ namespace CE205_HW3.libs
             }
 
         }
+        /**
+		*
+			@name  Searchy
+			@brief \b Search element
+		    **/
         public bool Searchy(int value, HashNode[] table)
         {
             int key = value % table.Length;
@@ -90,6 +129,11 @@ namespace CE205_HW3.libs
             return false;
 
         }
+        /**
+		*
+			@name  Searchy
+			@brief \b Delete element
+		    **/
         public void Deletey(int value, HashNode[] table)
         {
             int key = value % table.Length;
@@ -147,7 +191,11 @@ namespace CE205_HW3.libs
             desperate.printTable(table, ref grapObject);
             */
         }
-
+        /**
+		*
+			@name  printTable
+			@brief \b print table
+		    **/
         public void printTable(HashNode[] table, ref Microsoft.Msagl.Drawing.Graph grapObject)
         {
             for (int i = 0; i < table.Length; i++)

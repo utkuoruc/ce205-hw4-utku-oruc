@@ -1,10 +1,20 @@
+/****************************************************************************
+ * Copyleft (L) 2021 CENG - All Rights Not Reserved
+ * You may use, distribute and modify this code.
+ ****************************************************************************/
+
 /**
-  * @file Form1.cs
-  * @author Utku ORUC
-  * @date 20 November 2021
-  *
-  *
-  */
+ * @file Form1.cs
+ * @author Utku Oruc
+ * @date 21 December 2021
+ *
+ * @brief <b> Form Application </b>
+ *
+ * HW-4 Sample Lib Functions
+ *
+ * @see http://bilgisayar.mmf.erdogan.edu.tr/en/
+ *
+ */
 using Microsoft.Msagl.Drawing;
 using System;
 using System.Collections.Generic;
@@ -19,6 +29,11 @@ namespace CE205_HW3
     public partial class Form1 : Form
     {
         private Microsoft.Msagl.Drawing.Graph _graphObject;
+        /**
+		*
+			@name  SetIndexes
+			@brief \b set green indexes
+		    **/
         public void SetIndexes(int length, ref Microsoft.Msagl.Drawing.Graph graphObject)
         {
             graphObject = new Microsoft.Msagl.Drawing.Graph("graph");
@@ -44,11 +59,21 @@ namespace CE205_HW3
                 */
             }
         }
+        /**
+		*
+			@name  Form1
+			@brief \b InitializeComponent();
+		    **/
         public Form1()
         {
             InitializeComponent();
         }
         private readonly Random _random = new Random();
+        /**
+		*
+			@name  RandomNumber
+			@brief \b ramdom num
+		    **/
         public int RandomNumber(int min, int max)
         {
             return _random.Next(min, max);
@@ -91,6 +116,11 @@ namespace CE205_HW3
         Lineer lin1 = new Lineer(length);
         Quad quad1 = new Quad(length);
         Double db1 = new Double(length);
+        /**
+		*
+			@name  button1_Click
+			@brief \b when Create is clicked, create indexes
+		    **/
         public void button1_Click(object sender, EventArgs e)
         {
             if (rdBtnSeperate.Checked)
@@ -134,6 +164,11 @@ namespace CE205_HW3
                 gViewer1.Refresh();
             }
         }
+        /**
+       *
+           @name  MessageBoxes
+           @brief \b contains error messages, prints them out when it is necessary
+           **/
         private bool MessageBoxes(int textBoxNum)
         {
             TextBox textBoxy = new TextBox();
@@ -157,6 +192,11 @@ namespace CE205_HW3
 
             return true;
         }
+        /**
+       *
+           @name  buttonInsert_Click
+           @brief \b when clicked, insert element
+           **/
         private void buttonInsert_Click(object sender, EventArgs e)
         {
             if (rdBtnSeperate.Checked)
@@ -285,6 +325,11 @@ namespace CE205_HW3
                 gViewer1.Refresh();
             }
         }
+        /**
+        *
+          @name  buttonSearch_Click
+          @brief \b when clicked, Search element
+          **/
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             if (rdBtnSeperate.Checked)
@@ -435,6 +480,11 @@ namespace CE205_HW3
                 gViewer1.Refresh();
             }
         }
+        /**
+        *
+          @name  buttonDelete_Click
+          @brief \b when clicked, Delete element
+          **/
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (rdBtnSeperate.Checked)
