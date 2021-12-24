@@ -85,10 +85,9 @@ namespace CE205_HW3
         {
 
         }
-
-        Seperate.HashNode[] table = new Seperate.HashNode[5];
-        Seperate desperate = new Seperate();
         const int length = 10;
+        Seperate.HashNode[] table = new Seperate.HashNode[length];
+        Seperate desperate = new Seperate();
         Lineer lin1 = new Lineer(length);
         Quad quad1 = new Quad(length);
         Double db1 = new Double(length);
