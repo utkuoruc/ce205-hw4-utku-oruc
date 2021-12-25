@@ -87,6 +87,7 @@ namespace CE205_HW3.libs
             }
             int key = Hash(data);
             int actualKey = key;
+
             for (; key < table.Length + 1; key++)
             {
                 if (key == table.Length)

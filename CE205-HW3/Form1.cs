@@ -129,7 +129,7 @@ namespace CE205_HW3
                 //desperate.ClearTable();
                 for (int i = 0; i< length/2; i++)
                 {
-                    int a1 = RandomNumber(0,length*length);
+                    int a1 = RandomNumber(0,length * length * length);
                     bool result = desperate.Searchy(a1, table);
                     if (result)
                     {
@@ -194,7 +194,6 @@ namespace CE205_HW3
                 db1.ClearTable();
                 for (int i = 0; i < length / 2; i++)
                 {
-
                     int a1 = RandomNumber(0, length * length);
                     bool result = db1.Search(a1);
                     if (result)

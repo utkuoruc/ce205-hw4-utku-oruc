@@ -100,6 +100,10 @@ namespace CE205_HW3
             int key = Hash1(data);
             int actualKey = key;
 
+            if(!(key < table.Length && key >= 0))
+            {
+                return;
+            }
             if (table[key] != -1)
             {
                 while (table[key] != -1)

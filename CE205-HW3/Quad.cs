@@ -92,6 +92,7 @@ namespace CE205_HW3.libs
             int actualKey = key;
             int tries = 0;
 
+
             if (table[key] != -1)
             {
                 while (table[key] != -1)
