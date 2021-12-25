@@ -226,6 +226,14 @@ namespace CE205_HW3.libs
 			@name  printTable
 			@brief \b print table by adding nodes
 		    **/
+        public void ClearTable()
+        {
+            for (int i = 0; i < table.Length; i++)
+            {
+
+                table[i] = -1;
+            }
+        }
         public void printTable(ref Microsoft.Msagl.Drawing.Graph grapObject)
         {
             for (int i = 0; i < table.Length; i++)

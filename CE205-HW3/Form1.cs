@@ -126,6 +126,17 @@ namespace CE205_HW3
             if (rdBtnSeperate.Checked)
             {
                 SetIndexes(length, ref _graphObject);
+                //desperate.ClearTable();
+                for (int i = 0; i< length/2; i++)
+                {
+                    int a1 = RandomNumber(0,length*length);
+                    bool result = desperate.Searchy(a1, table);
+                    if (result)
+                    {
+                        continue;
+                    }
+                    desperate.Inserty(a1, table);
+                }
 
                 desperate.printTable(table, ref _graphObject);
 
@@ -136,6 +147,18 @@ namespace CE205_HW3
             else if (rdBtnLineer.Checked)
             {
                 SetIndexes(length, ref _graphObject);
+                lin1.ClearTable();
+                for (int i = 0; i < length / 2; i++)
+                {
+
+                    int a1 = RandomNumber(0, length * length);
+                    bool result = lin1.Search(a1);
+                    if (result)
+                    {
+                        continue;
+                    }
+                    lin1.Insert(a1);
+                }
 
                 lin1.printTable(ref _graphObject);
 
@@ -146,6 +169,18 @@ namespace CE205_HW3
             else if (rdBtnQuad.Checked)
             {
                 SetIndexes(length, ref _graphObject);
+                quad1.ClearTable();
+                for (int i = 0; i < length / 2; i++)
+                {
+
+                    int a1 = RandomNumber(0, length * length);
+                    bool result = quad1.Search(a1);
+                    if (result)
+                    {
+                        continue;
+                    }
+                    quad1.Insert(a1);
+                }
 
                 quad1.printTable(ref _graphObject);
 
@@ -156,6 +191,18 @@ namespace CE205_HW3
             else if (rdBtnDouble.Checked)
             {
                 SetIndexes(length, ref _graphObject);
+                db1.ClearTable();
+                for (int i = 0; i < length / 2; i++)
+                {
+
+                    int a1 = RandomNumber(0, length * length);
+                    bool result = db1.Search(a1);
+                    if (result)
+                    {
+                        continue;
+                    }
+                    db1.Insert(a1);
+                }
 
                 db1.printTable(ref _graphObject);
 

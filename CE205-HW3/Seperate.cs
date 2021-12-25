@@ -196,6 +196,14 @@ namespace CE205_HW3.libs
 			@name  printTable
 			@brief \b print table
 		    **/
+        public void ClearTable()
+        {
+            for (int i = 0; i < table.Length; i++)
+            {
+
+                table[i].data = -1;
+            }
+        }
         public void printTable(HashNode[] table, ref Microsoft.Msagl.Drawing.Graph grapObject)
         {
             for (int i = 0; i < table.Length; i++)
